@@ -2,7 +2,7 @@
 
 return[
     'tailoring' => 'Tailoring',
-    'tag_line' => 'Smart operations for custom creations.',
+    'tag_line' => 'Smart Accounting, Simplified for Small Entrepreneurs!',
     'username' => 'Username',
     'password' => 'Password',
     'enter_password' => 'Please enter your password',
