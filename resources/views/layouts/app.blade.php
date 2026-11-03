@@ -84,12 +84,12 @@
         .label-primary,
         .modal-primary .modal-body,
         .progress-bar {
-            background-color: #ed143d !important;
+            background-color: #139375 !important;
         }
 
         .tw-dw-btn:not(.btn-group .tw-dw-btn):not(.table tr .tw-dw-btn) {
-            background-color: #ed143d;
-            border: 1px solid #ed143d;
+            background-color: #139375;
+            border: 1px solid #139375;
             color: #fff;
         }
 
@@ -105,41 +105,178 @@
         .pagination>.active>span,
         .pagination>.active>span:focus,
         .pagination>.active>span:hover {
-            background-color: #ed143d;
-            border-color: #ed143d;
+            background-color: #139375;
+            border-color: #139375;
         }
 
         .tw-to-blue-500:hover,
         .tw-from-indigo-600:hover,
         .pos-header .tw-bg-primary-800:hover,
         .tw-dw-btn:hover:not(.table tr .tw-dw-btn:hover) {
-            background: #912018;
+            background: #027257;
             color: #ffffff;
         }
 
         .side-bar-link {
-            background-color: #333;
+            background-color: #007F61;
             height: 62px;
         }
 
         .nav-tabs-custom>.nav-tabs>li.active {
-            border-top-color: #ed143d;
+            border-top-color: #139375;
         }
 
         .tw-text-primary-700,
         a {
-            color: #ed143d;
+            color: #007F61;
         }
+
+
+
+        a.drop_down.tw-flex.tw-items-center.tw-gap-3.tw-px-3.tw-py-2.tw-text-sm.tw-font-medium.tw-tracking-tight.tw-text-gray-600.tw-transition-all.tw-duration-200.tw-rounded-lg.tw-whitespace-nowrap.hover\:tw-text-gray-900.hover\:tw-bg-gray-100.focus\:tw-text-gray-900.focus\:tw-bg-gray-100:hover {
+            background-color: #e6f4f1;
+            color: #007F61 !important;
+        }
+
+        .daterangepicker .ranges li.active {
+            background-color: #007F61;
+        }
+
+        .daterangepicker .ranges li:hover {
+            background-color: #027257;
+            color: #fff;
+        }
+
+        input.form-control.input-sm {
+            border-radius: 8px;
+        }
+
+        .icheckbox_square-blue,
+        .iradio_square-blue,
+        .icheckbox_flat-blue,
+        .iradio_flat-blue {
+            position: relative;
+            width: 22px;
+            height: 22px;
+            background: #ffffff !important;
+            border: 2px solid #139375 !important;
+            border-radius: 3px;
+            transition: background-color .15s ease, border-color .15s ease;
+        }
+
+        .iradio_square-blue,
+        .iradio_flat-blue {
+            border-radius: 50%;
+        }
+
+        .icheckbox_square-blue:hover,
+        .icheckbox_square-blue.hover,
+        .iradio_square-blue:hover,
+        .iradio_square-blue.hover,
+        .icheckbox_flat-blue:hover,
+        .icheckbox_flat-blue.hover,
+        .iradio_flat-blue:hover,
+        .iradio_flat-blue.hover {
+            border-color: #027257 !important;
+        }
+
+        .icheckbox_square-blue.checked,
+        .iradio_square-blue.checked,
+        .icheckbox_flat-blue.checked,
+        .iradio_flat-blue.checked {
+            background: #139375 !important;
+            border-color: #139375 !important;
+        }
+
+        .d-none+.select2-container,
+        .hide+.select2-container,
+        select.d-none+.select2-container,
+        select.hide+.select2-container,
+        select[style*="display: none"]+.select2-container,
+        select[style*="display:none"]+.select2-container {
+            display: none !important;
+        }
+
+        .icheckbox_square-blue.checked:hover,
+        .icheckbox_square-blue.checked.hover,
+        .iradio_square-blue.checked:hover,
+        .iradio_square-blue.checked.hover,
+        .icheckbox_flat-blue.checked:hover,
+        .icheckbox_flat-blue.checked.hover,
+        .iradio_flat-blue.checked:hover,
+        .iradio_flat-blue.checked.hover {
+            background: #027257 !important;
+            border-color: #027257 !important;
+        }
+
+        .icheckbox_square-blue.checked::after,
+        .icheckbox_flat-blue.checked::after {
+            content: '\2713';
+            position: absolute;
+            left: 2px;
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        .iradio_square-blue.checked::after,
+        .iradio_flat-blue.checked::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+
+        .tw-to-blue-500:hover,
+        .tw-from-indigo-600:hover,
+        .pos-header .tw-bg-primary-800:hover,
+        .tw-dw-btn:hover:not(.table tr .tw-dw-btn:hover),
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active,
+        .btn-success:hover,
+        .btn-success:focus,
+        .btn-success:active,
+        .new-order-button:hover,
+        .new-order-button:focus,
+        .new-order-button:active {
+            background-color: #027257 !important;
+            border-color: #027257 !important;
+            color: #ffffff;
+        }
+
+        .new-order-button {
+            border-radius: .5rem;
+            color: #fff;
+            background-color: #139375 !important;
+            border: 1px solid #139375 !important;
+        }
+
+        button.tw-dw-btn-info.dropdown-toggle {
+            color: #007f61 !important;
+            border-color: #007f61 !important;
+        }
+
+        button.tw-dw-btn-info.dropdown-toggle:hover,
+        button.tw-dw-btn-info.dropdown-toggle:focus,
+        button.tw-dw-btn-info.dropdown-toggle:active {
+            background-color: #007f61 !important;
+            color: #fff !important;
+            border-color: #007f61 !important;
+        }
+
 
         a:active,
         a:focus,
         a:hover {
-            color: #912018;
+            color: #007F61;
         }
 
         .pos-header,
         .pos-footer {
-            background-color: #333333;
+            background-color: #007F61;
         }
 
         .pos-sub-footer {
@@ -158,7 +295,7 @@
         }
 
         .pos-header .tw-bg-primary-800 {
-            background-color: #ed143d;
+            background-color: #139375 !important;
             border-radius: 50px;
         }
     </style>
