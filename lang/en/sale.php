@@ -29,6 +29,7 @@ return [
     'express_finalize' => 'Express <br/>Checkout',
     'product' => 'Product',
     'products' => 'Products',
+    'manage_sells' => 'Manage Sells',
     'unit_price' => 'Unit Price',
     'qty' => 'Quantity',
     'subtotal' => 'Subtotal',

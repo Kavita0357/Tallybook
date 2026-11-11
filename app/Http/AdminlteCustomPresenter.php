@@ -177,12 +177,16 @@ class AdminlteCustomPresenter extends Presenter
      */
     protected function formatIcon($icon)
     {
+        if (empty($icon)) {
+            return '';
+        }
+
         // Check if the icon string contains "<svg" or "<i", indicating it's an SVG icon or already formatted icon tag
         if (strpos($icon, '<svg') !== false || strpos($icon, '<i') !== false) {
             return $icon; // Return the icon directly
         } else {
             // Assume it's a FontAwesome class name and return it wrapped in an <i> tag
-            return '<i class="' . $icon . '"></i>';
+            return '<i aria-hidden="true" class="tw-w-5 tw-shrink-0 tw-text-center ' . $icon . '"></i>';
         }
     }
 
