@@ -2,6 +2,7 @@
 
 return [
     'enable_editing_product_from_purchase' => 'Enable editing product price from purchase screen',
+    'address'=>'Address',
     'sales_commission_agent' => 'Sales Commission Agent',
     'sales_commission_agents' => 'Sales Commission Agents',
     'disable' => 'Disable',
