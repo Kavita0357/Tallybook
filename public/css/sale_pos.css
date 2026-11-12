@@ -28,6 +28,11 @@
     margin-right: 5px;
 }
 
+#cloth-pos-workspace #product_list_body {
+    max-height: none !important;
+    overflow-y: visible !important;
+}
+
 #cloth-pos-workspace .cloth-pos-order-panel {
     width: 59%;
     min-width: 0;
@@ -134,7 +139,7 @@
 #cloth-pos-workspace .cloth-custom-input-group .add-btn {
     background: transparent;
     border: none;
-    color: #3b82f6;
+    color: #139375;
     font-size: 20px;
     font-weight: 400;
     padding: 0 2px 2px 4px;
@@ -143,7 +148,7 @@
 }
 
 #cloth-pos-workspace .cloth-custom-input-group .add-btn:hover {
-    color: #2563eb;
+    color: #027257;
 }
 
 #cloth-pos-workspace .cloth-pos-table-wrap {

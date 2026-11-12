@@ -1792,7 +1792,7 @@ function pos_total_row() {
 
     //updating shipping charges
     $('span#shipping_charges_amount').text(
-        __currency_trans_from_en(__read_number($('input#shipping_charges_modal')), false)
+        __currency_trans_from_en(__read_number($('input#shipping_charges_modal')), true)
     );
 
     $('span.total_quantity').each(function() {
@@ -1800,7 +1800,7 @@ function pos_total_row() {
     });
 
     //$('span.unit_price_total').html(unit_price_total);
-    $('span.price_total').html(__currency_trans_from_en(price_total, false));
+    $('span.price_total').html(__currency_trans_from_en(price_total, true));
     calculate_billing_details(price_total);
 }
 
@@ -1829,7 +1829,7 @@ function calculate_billing_details(price_total) {
         discount = parseFloat(discount) + parseFloat(total_customer_reward);
 
         if ($('input[name="is_direct_sale"]').length <= 0) {
-            $('span#total_discount').text(__currency_trans_from_en(discount, false));
+            $('span#total_discount').text(__currency_trans_from_en(discount, true));
         }
     }
 
@@ -1860,7 +1860,7 @@ function calculate_billing_details(price_total) {
         packing_charge = __calculate_amount($('#packing_charge_type').val(), 
             __read_number($('input#packing_charge')), price_total);
 
-        $('#packing_charge_text').text(__currency_trans_from_en(packing_charge, false));
+        $('#packing_charge_text').text(__currency_trans_from_en(packing_charge, true));
     }
 
     var total_payable = price_total + order_tax - discount + shipping_charges + packing_charge + additional_expense;
@@ -1871,7 +1871,7 @@ function calculate_billing_details(price_total) {
 
     var round_off_amount = round_off_data.diff;
     if (round_off_amount != 0) {
-        $('span#round_off_text').text(__currency_trans_from_en(round_off_amount, false));
+        $('span#round_off_text').text(__currency_trans_from_en(round_off_amount, true));
     } else {
         $('span#round_off_text').text(0);
     }
@@ -1883,7 +1883,7 @@ function calculate_billing_details(price_total) {
         curr_exchange_rate = __read_number($('#exchange_rate'));
     }
     var shown_total = total_payable_rounded * curr_exchange_rate;
-    $('span#total_payable').text(__currency_trans_from_en(shown_total, false));
+    $('span#total_payable').text(__currency_trans_from_en(shown_total, true));
 
     $('span.total_payable_span').text(__currency_trans_from_en(total_payable_rounded, true));
 
@@ -1903,7 +1903,7 @@ function pos_discount(total_amount) {
 
     var discount = __calculate_amount(calculation_type, calculation_amount, total_amount);
 
-    $('span#total_discount').text(__currency_trans_from_en(discount, false));
+    $('span#total_discount').text(__currency_trans_from_en(discount, true));
 
     return discount;
 }
@@ -1920,7 +1920,7 @@ function pos_order_tax(price_total, discount) {
         var order_tax = 0;
     }
 
-    $('span#order_tax').text(__currency_trans_from_en(order_tax, false));
+    $('span#order_tax').text(__currency_trans_from_en(order_tax, true));
 
     return order_tax;
 }

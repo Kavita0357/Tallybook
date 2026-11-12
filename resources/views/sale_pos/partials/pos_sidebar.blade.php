@@ -26,21 +26,21 @@
                     <label for="my-drawer-4" aria-label="close sidebar"
                         class="tw-dw-drawer-overlay overlay-category"></label>
                     <div class="tw-dw-menu tw-w-2/4 tw-min-h-full tw-bg-white tw-p-6">
-                        <div class="tw-flex tw-items-center tw-mb-16">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-gap-3" style="margin-bottom: 24px;">
                             <button type="button"
-                                class="tw-dw-btn tw-dw-btn-accent category-back tw-bg-transparent tw-border-2"
+                                class="tw-dw-btn tw-dw-btn-accent category-back"
                                 style="display: none">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="tw-w-5 icon icon-tabler icon-tabler-chevron-left" width="44"
-                                    height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50"
+                                    height="44" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff"
                                     fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M15 6l-6 6l6 6" />
                                 </svg>
                             </button>
 
-                            <h3 class="tw-text-center tw-flex-grow mx-auto category_heading tw-bg-gradient-to-r tw-from-indigo-600 tw-to-blue-500 tw-inline-block tw-text-transparent tw-bg-clip-text tw-font-bold tw-text-base md:tw-text-2xl"
-                                style="margin-bottom: 0px; margin-top:5px;">@lang('category.category')</h3>
+                            <h3 class="tw-text-center tw-flex-grow mx-auto category_heading tw-font-bold tw-text-base md:tw-text-2xl"
+                                style="margin-bottom: 0px; margin-top: 0px; color: #111827;">@lang('category.category')</h3>
 
                             <button type="button" class="tw-dw-btn tw-dw-btn-error close-side-bar-category">
                                 <i class="fa fa-times-circle" aria-hidden="true"></i>
@@ -128,9 +128,9 @@
                         class="tw-dw-drawer-overlay overlay-brand"></label>
                     <div class="tw-dw-menu tw-w-2/4 tw-min-h-full tw-bg-white tw-p-6">
 
-                        <div class="tw-flex tw-items-center tw-mb-16">
-                            <h3 class="tw-text-center tw-mx-auto tw-bg-gradient-to-r tw-from-indigo-600 tw-to-blue-500 tw-text-transparent tw-bg-clip-text tw-font-bold tw-text-base md:tw-text-2xl tw-mb-16"
-                                style="margin-bottom: 0px; margin-top:5px;">@lang('brand.brands')</h3>
+                        <div class="tw-flex tw-items-center tw-justify-between tw-gap-3" style="margin-bottom: 24px;">
+                            <h3 class="tw-text-center tw-mx-auto tw-font-bold tw-text-base md:tw-text-2xl"
+                                style="margin-bottom: 0px; margin-top: 0px; color: #111827;">@lang('brand.brands')</h3>
                             <button type="button" class="tw-dw-btn tw-dw-btn-error close-side-bar-brand">
                                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                             </button>

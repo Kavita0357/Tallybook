@@ -73,10 +73,10 @@
     <div class="col-sm-6">
         <div class="form-group">
             {!! Form::label('rp_expiry_period', __('lang_v1.rp_expiry_period') . ':') !!} @show_tooltip(__('lang_v1.rp_expiry_period_tooltip'))
-            <div class="input-group">
-                {!! Form::number('rp_expiry_period', $business->rp_expiry_period, ['class' => 'form-control','placeholder' => __('lang_v1.rp_expiry_period')]); !!}
-                <span class="input-group-addon">-</span>
-                {!! Form::select('rp_expiry_type', ['month' => __('lang_v1.month'), 'year' => __('lang_v1.year')], $business->rp_expiry_type, ['class' => 'form-control']); !!}
+            <div class="input-group" style="display: flex !important; align-items: center;">
+                {!! Form::number('rp_expiry_period', $business->rp_expiry_period, ['class' => 'form-control', 'style' => 'flex: 1;', 'placeholder' => __('lang_v1.rp_expiry_period')]); !!}
+                <span class="input-group-addon" style="width: auto !important; flex: 0 0 auto; height: 38px !important; line-height: 36px !important; display: inline-flex !important; align-items: center; justify-content: center;">-</span>
+                {!! Form::select('rp_expiry_type', ['month' => __('lang_v1.month'), 'year' => __('lang_v1.year')], $business->rp_expiry_type, ['class' => 'form-control', 'style' => 'flex: 1;']); !!}
             </div>
         </div>
     </div>

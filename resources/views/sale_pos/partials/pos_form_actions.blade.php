@@ -35,7 +35,7 @@
                         </div>
                         <input type="hidden" name="final_total" id="final_total_input" value="0.00">
                         <span id="total_payable"
-                            class="tw-text-green-900 tw-font-bold tw-text-base md:tw-text-2xl number">0.00</span>
+                            class="tw-text-green-900 tw-font-bold tw-text-base md:tw-text-2xl number">@format_currency(0)</span>
                     </div>
                 @endif
                 @if (!Gate::check('disable_pay_checkout') || auth()->user()->can('superadmin') || auth()->user()->can('admin'))
