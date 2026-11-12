@@ -266,7 +266,8 @@
                     @endif
                 </div>
                 <div
-                    class="tw-hidden md:tw-block tw-bg-[#646EE4] hover:tw-bg-[#414aac] tw-py-1.5 tw-px-2 tw-rounded-md">
+                    class="tw-hidden md:tw-inline-flex tw-items-center tw-bg-[#646EE4] hover:tw-bg-[#414aac] tw-px-3 tw-rounded-md"
+                    style="height: 36px;">
                     <i class="fa fa-calendar hover-q text-white" aria-hidden="true" data-container="body"
                         data-toggle="popover" data-placement="bottom" data-content="@include('sale_pos.partials.keyboard_shortcuts_details')"
                         data-html="true" data-trigger="hover" data-original-title="" title=""></i>
