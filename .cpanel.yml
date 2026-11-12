@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/tallybookcom/pos.tallybook.com.bd
+    - /bin/cp -R public $DEPLOYPATH
