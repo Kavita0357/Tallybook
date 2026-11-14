@@ -422,6 +422,46 @@ class AdminSidebarMenu
                 )->order(35);
             }
 
+            // Messaging dropdown
+            $menu->dropdown(
+                'Messaging',
+                function ($sub) {
+
+                    $sub->url(
+                        action([\App\Http\Controllers\MessagingController::class, 'create']),
+                        'Send Bulk SMS',
+                        [
+                            'icon' => '',
+                            'active' => request()->segment(1) == 'messaging' && request()->segment(2) == 'create'
+                        ]
+                    );
+
+                    if (auth()->user()->can('send_notifications')) {
+                        $sub->url(
+                            action([\App\Http\Controllers\NotificationTemplateController::class, 'index']),
+                            __('lang_v1.notification_templates'),
+                            [
+                                'icon' => '',
+                                'active' => request()->segment(1) == 'notification-templates'
+                            ]
+                        )->order(80);
+
+                        $sub->url(
+                            action([\App\Http\Controllers\MessagingController::class, 'index']),
+                            'SMS Log',
+                            [
+                                'icon' => '',
+                                'active' => request()->segment(1) == 'messaging' && !request()->segment(2)
+                            ]
+                        )->order(85);
+                    }
+                },
+                [
+                    'icon' => '<i class="fa-solid fa-message"></i>',
+                    'id' => 'tour_step5'
+                ]
+            )->order(120);
+
             //Expense dropdown
             if (in_array('expenses', $enabled_modules) && (auth()->user()->can('all_expense.access') || auth()->user()->can('view_own_expense'))) {
                 $menu->dropdown(

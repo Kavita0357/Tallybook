@@ -42,8 +42,6 @@
                             <a href="#"
                                 class="list-group-item text-center tw-font-bold tw-text-sm md:tw-text-base">@lang('business.sale')</a>
                             <a href="#"
-                                class="list-group-item text-center tw-font-bold tw-text-sm md:tw-text-base">@lang('tailoring.cloth_pos')</a>
-                            <a href="#"
                                 class="list-group-item text-center tw-font-bold tw-text-sm md:tw-text-base">@lang('purchase.purchases')</a>
                             <a href="#"
                                 class="list-group-item text-center tw-font-bold tw-text-sm md:tw-text-base">@lang('lang_v1.payment')</a>

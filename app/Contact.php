@@ -235,6 +235,24 @@ class Contact extends Authenticatable
         return $customers;
     }
 
+    /* Return list of all customers for messaging */
+
+    public static function customersForMessaging($business_id, $type = "customer")
+    {
+        $all_contacts = Contact::where('contacts.business_id', $business_id)
+            ->whereIn('contacts.type', [$type])
+            ->active();
+
+        $all_contacts->select('contacts.name', 'contacts.mobile');
+
+        if (auth()->check() && ! auth()->user()->can('customer.view') && auth()->user()->can('customer.view_own')) {
+            $all_contacts->onlyOwnContact();
+        }
+
+        // key = mobile (value), value = name (label)
+        return $all_contacts->pluck('name', 'mobile');
+    }
+
     /**
      * Return list of contact type.
      *
