@@ -420,6 +420,37 @@ class AdminSidebarMenu
                     },
                     ['icon' => 'fas fa-truck']
                 )->order(35);
+            }            
+
+            //Expense dropdown
+            if (in_array('expenses', $enabled_modules) && (auth()->user()->can('all_expense.access') || auth()->user()->can('view_own_expense'))) {
+                $menu->dropdown(
+                    __('expense.expenses'),
+                    function ($sub) {
+                        $sub->url(
+                            action([\App\Http\Controllers\ExpenseController::class, 'index']),
+                            __('lang_v1.list_expenses'),
+                            ['icon' => '', 'active' => request()->segment(1) == 'expenses' && request()->segment(2) == null]
+                        );
+
+                        if (auth()->user()->can('expense.add')) {
+                            $sub->url(
+                                action([\App\Http\Controllers\ExpenseController::class, 'create']),
+                                __('expense.add_expense'),
+                                ['icon' => '', 'active' => request()->segment(1) == 'expenses' && request()->segment(2) == 'create']
+                            );
+                        }
+
+                        if (auth()->user()->can('expense.add') || auth()->user()->can('expense.edit')) {
+                            $sub->url(
+                                action([\App\Http\Controllers\ExpenseCategoryController::class, 'index']),
+                                __('expense.expense_categories'),
+                                ['icon' => '', 'active' => request()->segment(1) == 'expense-categories']
+                            );
+                        }
+                    },
+                    ['icon' => 'fas fa-receipt']
+                )->order(45);
             }
 
             // Messaging dropdown
@@ -460,38 +491,8 @@ class AdminSidebarMenu
                     'icon' => '<i class="fa-solid fa-message"></i>',
                     'id' => 'tour_step5'
                 ]
-            )->order(120);
+            )->order(47);
 
-            //Expense dropdown
-            if (in_array('expenses', $enabled_modules) && (auth()->user()->can('all_expense.access') || auth()->user()->can('view_own_expense'))) {
-                $menu->dropdown(
-                    __('expense.expenses'),
-                    function ($sub) {
-                        $sub->url(
-                            action([\App\Http\Controllers\ExpenseController::class, 'index']),
-                            __('lang_v1.list_expenses'),
-                            ['icon' => '', 'active' => request()->segment(1) == 'expenses' && request()->segment(2) == null]
-                        );
-
-                        if (auth()->user()->can('expense.add')) {
-                            $sub->url(
-                                action([\App\Http\Controllers\ExpenseController::class, 'create']),
-                                __('expense.add_expense'),
-                                ['icon' => '', 'active' => request()->segment(1) == 'expenses' && request()->segment(2) == 'create']
-                            );
-                        }
-
-                        if (auth()->user()->can('expense.add') || auth()->user()->can('expense.edit')) {
-                            $sub->url(
-                                action([\App\Http\Controllers\ExpenseCategoryController::class, 'index']),
-                                __('expense.expense_categories'),
-                                ['icon' => '', 'active' => request()->segment(1) == 'expense-categories']
-                            );
-                        }
-                    },
-                    ['icon' => 'fas fa-receipt']
-                )->order(45);
-            }
             //Accounts dropdown
             if (auth()->user()->can('account.access') && in_array('account', $enabled_modules)) {
                 $menu->dropdown(
@@ -824,9 +825,9 @@ class AdminSidebarMenu
                         }
 
                         //Notification template menu
-                        if (auth()->user()->can('send_notifications')) {
+                        /* if (auth()->user()->can('send_notifications')) {
                             $sub->url(action([\App\Http\Controllers\NotificationTemplateController::class, 'index']), __('lang_v1.notification_templates'), ['icon' => '', 'active' => request()->segment(1) == 'notification-templates']);
-                        }
+                        } */
                     },
                     ['icon' => 'fas fa-sliders-h', 'id' => 'tour_step3']
                 )->order(85);
