@@ -31,6 +31,7 @@ use App\Http\Controllers\LabelsController;
 use App\Http\Controllers\LedgerDiscountController;
 use App\Http\Controllers\LocationSettingsController;
 use App\Http\Controllers\ManageUserController;
+use App\Http\Controllers\MessagingController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\NotificationTemplateController;
 use App\Http\Controllers\OpeningStockController;
@@ -354,6 +355,10 @@ Route::middleware(['setData', 'auth', 'SetSessionData', 'language', 'timezone', 
 
     Route::get('/opening-stock/add/{product_id}', [OpeningStockController::class, 'add']);
     Route::post('/opening-stock/save', [OpeningStockController::class, 'save']);
+
+    //Messaging
+    Route::resource('messaging', MessagingController::class);
+    Route::post('/messaging/send-sms', [MessagingController::class, 'sendSms']);
 
     //Customer Groups
     Route::resource('customer-group', CustomerGroupController::class);
